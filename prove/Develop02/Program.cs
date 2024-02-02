@@ -21,7 +21,7 @@ class Program
                     Console.WriteLine();
                     PromptGenerator promptGen = new PromptGenerator();
                     string _prompt = promptGen.GetRandomPrompt(); // Generate a random prompt
-                    quoteGenerator quoteGen = new quoteGenerator();
+                    QuoteGenerator quoteGen = new QuoteGenerator();
                     string _quote = quoteGen.GetRandomQuote(); // Generate a random quote
 
                     Console.WriteLine($"Motivational quote: '{_quote}'");

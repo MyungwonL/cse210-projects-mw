@@ -21,7 +21,7 @@ public class PromptGenerator
     }
 }
 
-public class quoteGenerator
+public class QuoteGenerator
 {
     public string[] _quotes = new string[]
     {
