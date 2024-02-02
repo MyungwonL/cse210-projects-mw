@@ -10,23 +10,29 @@ class Program
 
         Console.WriteLine("Welcome to the Journal Program");
         
-        int userChoice = 0;
-        while (userChoice != 5)
+        int _userChoice = 0;
+        while (_userChoice != 5)
         {
-            userChoice = journal.StartingPrompt();
+            _userChoice = journal.StartingPrompt();
 
-            switch (userChoice)
+            switch (_userChoice)
             {
                 case 1: // Write
+                    Console.WriteLine();
                     PromptGenerator promptGen = new PromptGenerator();
-                    string prompt = promptGen.RandomPrompt(); // Generate a random prompt
-                    Console.Write($"{prompt}\n> "); 
-                    string response = Console.ReadLine(); // Get user entry
+                    string _prompt = promptGen.GetRandomPrompt(); // Generate a random prompt
+                    quoteGenerator quoteGen = new quoteGenerator();
+                    string _quote = quoteGen.GetRandomQuote(); // Generate a random quote
+
+                    Console.WriteLine($"Motivational quote: '{_quote}'");
+                    Console.Write($"{_prompt}\n> "); 
+                    string _response = Console.ReadLine(); // Get user entry
 
                     Entry entry = new Entry();
-                    entry._prompt = prompt;
-                    entry._response = response;
+                    entry._prompt = _prompt;
+                    entry._response = _response;
                     entry._entryDate = DateTime.Now.ToString();
+                    entry._quote = _quote;
                     journal._entries.Add(entry);
 
                     Console.WriteLine();
@@ -37,12 +43,13 @@ class Program
                     foreach (Entry eachEntry in journal._entries)
                     {
                         Console.WriteLine($"{eachEntry._entryDate} - Prompt: {eachEntry._prompt}\n> {eachEntry._response}");
+                        Console.WriteLine($"Motivational quote: '{eachEntry._quote}'");
                         Console.WriteLine();
                     }
                     break;
                 case 3: // Load
-                    string filename = journal.GetFileName(); // Get filename from user
-                    journal.LoadJournal(filename); // Load the file if exists
+                    string _filename = journal.GetFileName(); // Get filename from user
+                    journal.LoadJournal(_filename); // Load the file if exists
                     Console.WriteLine();
                     break;
                 case 4: // Save
