@@ -28,14 +28,13 @@ public class Scripture
             Word word = new(aWord);
             words.Add(word);
         }
-        
+
         foreach (string aWord in splitWords2)
         {
             Word word = new(aWord);
             words.Add(word);
         }
     }
-
 
     public void ShowScripture()
     {
