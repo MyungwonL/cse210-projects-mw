@@ -23,9 +23,9 @@ class SelfEsteemActivity : Activity
         questions.Add("Life will knock you down more than you can imagine. So, don't knock yourself down.");
         questions.Add("Act as if what you can make a difference because you can and will.");
 
-        Console.WriteLine("\nThink about this message:\n");
+        Console.WriteLine("\n\nThink about this message:\n");
         Console.WriteLine(questions[_randomQuestion]);
-        Console.WriteLine("\nPress enter if you took enough time to ponder about this.\n");
+        Console.Write("\nPress enter if you took enough time to ponder about this.");
         string userInt = Console.ReadLine();
         if (string.IsNullOrEmpty(userInt))
         {

@@ -12,36 +12,36 @@ class ListingActivity : Activity
     public void Randomprompt()
     {
         Random randomGenerator = new Random();
-        _randomNumber = randomGenerator.Next(1,6);
+        _randomNumber = randomGenerator.Next(1, 6);
 
         Console.WriteLine("List as many responses you can to the foloowing prompt:\n");
 
-        switch(_randomNumber)
+        switch (_randomNumber)
         {
-            case 1 :
+            case 1:
                 Console.WriteLine(" --- Who are people that you appreciate? ---");
                 break;
-            case 2 :
+            case 2:
                 Console.WriteLine(" --- What are personal strengths of yours? ---");
                 break;
-            case 3 :
+            case 3:
                 Console.WriteLine(" --- Who are people that you have helped this week? --- ");
                 break;
-            case 4 :
+            case 4:
                 Console.WriteLine(" --- When have you felt the Holy Ghost this month? --- ");
                 break;
-            case 5 :
+            case 5:
                 Console.WriteLine(" --- Who are some of your personal heroes? --- ");
                 break;
         }
 
         Console.Write("\nYou may begin in: ");
-        for(int i = 5; i>0; i--)
-            {
-                Console.Write(i);
-                Thread.Sleep(1000); 
-                Console.Write("\b \b");                  
-            }
+        for (int i = 5; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
         Console.WriteLine();
     }
     public void Answer(int sec)
@@ -51,16 +51,17 @@ class ListingActivity : Activity
 
         while (DateTime.Now < endTime)
         {
-            if (Console.KeyAvailable) {
+            if (Console.KeyAvailable)
+            {
                 Console.Write("> ");
                 string userInput = Console.ReadLine();
-                if(!string.IsNullOrEmpty(userInput))
+                if (!string.IsNullOrEmpty(userInput))
                 {
                     _count++;
                 }
             }
         }
         Console.WriteLine($"You listed {_count} items!");
-        
+
     }
 }
