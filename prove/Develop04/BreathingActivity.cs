@@ -6,7 +6,7 @@ class BreathingActivity : Activity
     public BreathingActivity()
     {
         _activityName = "Breathing activity";
-        _description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+        _description = "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
 
     //breath in 4 sec, breath out 6 sec.
