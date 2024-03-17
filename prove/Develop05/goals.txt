@@ -1,0 +1,5 @@
+70
+SimpleGoal:simple,simple goal,50,True
+EternalGoal:eternal,eternal goal,30
+ChecklistGoal:check,checklist goal,50,100,5,1
+BadHabit:spent more than 2hrs on social media,spent more than 2hrs on social media today,-60,10,1
