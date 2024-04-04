@@ -13,7 +13,7 @@ class Program
         var outdoorGatheringEvent = new OutdoorGatheringEvent("Outdoor Gathering Title", "Outdoor Gathering Description", DateTime.Now,
             TimeSpan.FromHours(16), new Address("789 Oak St", "City", "State", "Country"), "Sunny");
 
-        
+
         Console.WriteLine("Lecture Event");
         Console.WriteLine("1.Standard Description\n" + lectureEvent.GetStandardDetails());
         Console.WriteLine(lectureEvent.GetFullDetails());
@@ -31,5 +31,5 @@ class Program
         Console.WriteLine(outdoorGatheringEvent.GetFullDetails());
         Console.WriteLine(outdoorGatheringEvent.GetShortDescription());
     }
-    }
+}
 
